@@ -34,7 +34,7 @@
       <a href="about.html"${ac('about.html')}>About</a>
       <a href="trainers.html"${ac('trainers.html')}>Trainers</a>
       <a href="membership.html"${ac('membership.html')}>Membership</a>
-      <a href="contact.html"${ac('contact.html')}>Contact</a>
+      <a href="contact.html"${ac('contact.html#booking-form')}>Contact</a>
     </nav>
 
     <a href="#contact-strip" class="btn-primary nav-cta">Join Now</a>

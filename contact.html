@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | One Fitness – Bengaluru</title>
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <meta name="description" content="Get in touch with One Fitness on Mosque Road. Book a trial session, view our location, and see our operating hours.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_pages.css">
+</head>
+<body>
+
+<!-- Header injected by components.js -->
+<div id="header-root"></div>
+
+<!-- ── PAGE HERO ──────────────────────────────────────────── -->
+<section class="page-hero" aria-label="Contact Hero">
+  <div class="page-hero-bg" style="background-image: url('images/heroimg3.jpeg');"></div>
+  <div class="page-hero-scrim"></div>
+  <div class="wrap page-hero-content">
+    <p class="section-eyebrow reveal" style="color: #fff;">Get In Touch</p>
+    <h1 class="page-title reveal reveal-delay-1">Start Your<br><em>Journey.</em></h1>
+  </div>
+</section>
+
+<!-- ── CONTACT CONTENT ────────────────────────────────────── -->
+<section class="contact-page-section">
+  <div class="wrap contact-page-grid">
+    
+    <!-- LEFT COLUMN -->
+    <div class="contact-left">
+      <div class="contact-header reveal">
+        <h2 class="section-title">Visit <em>One Fitness</em></h2>
+        <p class="sub-text">Ready to transform? Drop by for a tour or book a trial session below. Our team is here to guide you.</p>
+      </div>
+
+      <div class="contact-info-boxes reveal reveal-delay-1">
+        <div class="c-box">
+          <h4>📍 Location &amp; Parking</h4>
+          <p>13 Mosque Road, Bengaluru</p>
+          <p class="c-note">We have dedicated 2-wheeler parking available right in front.</p>
+        </div>
+        <div class="c-box">
+          <h4>⏰ Operating Hours</h4>
+          <p><strong>Mon – Sat:</strong> 6:00 AM – 11:00 PM</p>
+          <p><strong>Sunday:</strong> Closed</p>
+          <p class="c-note">Flexible timings for working professionals.</p>
+        </div>
+        <div class="c-box">
+          <h4>📞 Direct Contact</h4>
+          <p><a href="tel:+919980522000" style="color:var(--red); font-weight:600;">099805 22000</a></p>
+        </div>
+      </div>
+
+      <div class="booking-form-wrap reveal reveal-delay-2" id="booking-form">
+        <h3>Book a Trial Session</h3>
+        <!-- Web3Forms integration: Replace YOUR_ACCESS_KEY_HERE with your free key from web3forms.com -->
+        <form class="booking-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="be07ce67-c90a-4c8a-a29d-3699a1e990a4">
+          <input type="hidden" name="subject" value="New Trial/Booking from One Fitness">
+          <!-- Optional: Redirect to a custom thank you page. For now, it uses the default Web3Forms success page -->
+          <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thankyou.html"> -->
+
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+          </div>
+          <div class="form-group">
+            <select name="interest" required>
+              <option value="" disabled selected>I'm interested in...</option>
+              <option value="trial">Free Trial Session</option>
+              <option value="membership">General Membership Details</option>
+              <option value="pt">Personal Training</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%;">Request Trial</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="contact-right">
+      
+      <!-- Why Choose Us -->
+      <div class="why-us-box reveal">
+        <h3 style="font-family:'Barlow Condensed',sans-serif; font-size:1.8rem; text-transform:uppercase; margin-bottom:16px;">Why Choose Us?</h3>
+        <ul class="eq-list">
+          <li>Cleanest gym environment</li>
+          <li>Steam room &amp; dedicated studio room</li>
+          <li>Certified Trainers &amp; Sports Nutritionists</li>
+          <li>First Aid &amp; CPR certified support staff</li>
+          <li>Monthly BCA body composition tracking</li>
+          <li>Functional training, Cardio &amp; Strength areas</li>
+          <li>Friendly community &amp; comfortable workout experience</li>
+          <li>Spacious layout with no overcrowded feel</li>
+        </ul>
+      </div>
+
+      <!-- Google Map -->
+      <div class="map-wrap reveal reveal-delay-1">
+        <!-- Active embedded Google Map pointing to Mosque Road -->
+         <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5989202940777!2d77.61183317385533!3d12.997485487320208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16f14f0e1ad1%3A0x89f399ec6f26d383!2sOne%20Fitness!5e0!3m2!1sen!2sin!4v1782283461106!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe> -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5989202940777!2d77.61183317385533!3d12.997485487320208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16f14f0e1ad1%3A0x89f399ec6f26d383!2sOne%20Fitness!5e0!3m2!1sen!2sin!4v1782283461106!5m2!1sen!2sin" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- FAQs -->
+      <div class="faq-section reveal reveal-delay-2">
+        <h3 style="font-family:'Barlow Condensed',sans-serif; font-size:1.6rem; text-transform:uppercase; margin-bottom:20px;">Quick FAQs</h3>
+        
+        <div class="faq-item">
+          <strong>Do you offer a free trial?</strong>
+          <p>Yes! You can book a trial session using the form on this page to experience our facility and trainers firsthand.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Is it overcrowded in the evenings?</strong>
+          <p>We strictly manage our floor capacity and have a spacious layout to ensure you never feel overcrowded, even during peak hours.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Are your trainers certified?</strong>
+          <p>Absolutely. All our trainers are certified, and our floor staff is trained in First Aid and CPR for your safety.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer injected by components.js -->
+<div id="footer-root"></div>
+
+<script src="js/components.js"></script>
+</body>
+</html>

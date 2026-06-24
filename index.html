@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Fitness | Premier Gym – Bengaluru, Mosque Road</title>
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <meta name="description" content="One Fitness — Bengaluru's go-to gym on Mosque Road. Expert trainers, modern equipment, and real results. Open every day until 10 PM.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header injected by js/components.js -->
+<div id="header-root"></div>
+
+
+<!-- ── HERO ───────────────────────────────────────────────── -->
+<section class="hero" id="home" aria-label="Hero">
+
+  <!-- Slides — add your images as <img> tags inside each .hero-slide -->
+  <div class="hero-slides" id="hero-slides">
+
+    <!--
+      HOW TO ADD YOUR PHOTOS:
+      Place your gym images in the images/ folder, then replace each slide's
+      background-image style below. Or drop an <img> tag inside each slide.
+      Example: <img src="../images/gym-floor.jpg" alt="Gym floor">
+    -->
+
+    <div class="hero-slide active" style="background-image: url('../images/hero.jpg'); background-size:cover; background-position:center top;">
+      <!--  If you have a slide 1 image, add it here: -->
+      <img src="images/heroimg1.jpeg" alt="One Fitness gym floor">
+    </div>
+
+    <div class="hero-slide" style="background: linear-gradient(135deg,#1c0e0e 0%,#3a1414 60%,#1c0e0e 100%);">
+      <!-- Slide 2 image placeholder -->
+       <img src="images/heroimg2.jpeg" alt="One Fitness gym floor">
+    </div>
+
+    <div class="hero-slide" style="background: linear-gradient(135deg,#0d0d1c 0%,#1a1a36 60%,#0d0d1c 100%);">
+      <!-- Slide 3 image placeholder -->
+       <img src="images/heroimg3.jpeg" alt="One Fitness gym floor">
+    </div>
+
+  </div>
+
+  <!-- Dark overlay -->
+  <div class="hero-scrim"></div>
+
+  <!-- Text content -->
+  <div class="hero-content">
+    <p class="hero-eyebrow">
+      <span></span>
+      Bengaluru's Premier Training Ground
+    </p>
+    <h1 class="hero-h1">
+      Train Hard.<br><em>Live Strong.</em>
+    </h1>
+    <p class="hero-sub">
+      Real coaching. Real results. One Fitness at Mosque Road is where Bengaluru comes to transform.
+    </p>
+    <div class="hero-actions">
+      <a href="membership.html" class="btn-primary">Start Your Journey</a>
+      <a href="about.html" class="btn-outline-white">Explore Facilities</a>
+    </div>
+  </div>
+
+  <!-- Prev / Next arrows -->
+  <button class="hero-arrow prev" id="hero-prev" aria-label="Previous slide">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="hero-arrow next" id="hero-next" aria-label="Next slide">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+
+  <!-- Dot controls -->
+  <div class="hero-controls" id="hero-dots" aria-label="Slide controls"></div>
+
+  <!-- Slide counter -->
+  <div class="hero-counter" id="hero-counter" aria-hidden="true">
+    <span class="current" id="hero-current">01</span> / <span id="hero-total">03</span>
+  </div>
+
+</section>
+
+
+<!-- ── STATS BAR ───────────────────────────────────────────── -->
+<section class="stats-bar" aria-label="Key statistics">
+  <div class="wrap stats-inner">
+    <div class="stat-item">
+      <div class="stat-number">
+        <span class="counter" data-target="100">0</span><span class="stat-suffix">+</span>
+      </div>
+      <div class="stat-label">Active Members</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">
+        <span class="counter" data-target="7">0</span><span class="stat-suffix">+</span>
+      </div>
+      <div class="stat-label">Expert Trainers</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">
+        <span class="counter" data-target="15">0</span><span class="stat-suffix">+</span>
+      </div>
+      <div class="stat-label">Programs Offered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">
+        <span class="counter" data-target="5">0</span><span class="stat-suffix">+</span>
+      </div>
+      <div class="stat-label">Years in Bengaluru</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── ABOUT ──────────────────────────────────────────────── -->
+<section class="about-section" id="about-preview" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+
+    <!-- Left: Text -->
+    <div class="about-text">
+      <p class="section-eyebrow reveal">Our Story</p>
+      <h2 class="section-title reveal reveal-delay-1" id="about-title">
+        More Than a Gym.<br>A <em>Movement.</em>
+      </h2>
+      <div class="about-body reveal reveal-delay-2">
+        <p>One Fitness was built on one belief: everyone deserves access to a serious training environment without the attitude. Located in the heart of Mosque Road, Bengaluru, we're open to all — beginners, athletes, and everyone in between.</p>
+        <p>Our floor is stocked with modern equipment, our trainers are certified professionals who actually listen, and our community keeps each other accountable. This isn't just where you work out — it's where you level up.</p>
+      </div>
+      <div class="feature-pills reveal reveal-delay-3">
+        <span class="pill">💪 Strength Training</span>
+        <span class="pill">🏃 Cardio Zone</span>
+        <span class="pill">🥊 CrossFit</span>
+        <span class="pill">🧘 Yoga &amp; Flexibility</span>
+        <span class="pill">🍎 Diet Consultation</span>
+        <span class="pill">👥 Group Classes</span>
+      </div>
+      <div class="reveal reveal-delay-4" style="margin-top:32px;">
+        <a href="about.html" class="btn-outline">Learn More About Us</a>
+      </div>
+    </div>
+
+    <!-- Right: Info cards -->
+    <div class="about-cards">
+      <div class="about-card reveal">
+        <div class="about-card-icon">⏰</div>
+        <h4>Open Every Day</h4>
+        <p>Mon – Sat, 6AM - 11PM. No excuses</p>
+      </div>
+      <div class="about-card reveal reveal-delay-1">
+        <div class="about-card-icon">📍</div>
+        <h4>Easy to Find</h4>
+        <p>13 Mosque Road, Bengaluru. Central with easy parking.</p>
+      </div>
+      <div class="about-card reveal reveal-delay-2">
+        <div class="about-card-icon">🏆</div>
+        <h4>Results Driven</h4>
+        <p>Personalised plans, form coaching, and progress tracking.</p>
+      </div>
+      <div class="about-card reveal reveal-delay-3">
+        <div class="about-card-icon">📞</div>
+        <h4>Talk to Us First</h4>
+        <p>Call 099805 22000 — we'll walk you through everything.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── PROGRAMS ────────────────────────────────────────────── -->
+<section class="programs-strip" aria-labelledby="programs-title">
+  <div class="wrap">
+    <div class="programs-header">
+      <div>
+        <p class="section-eyebrow reveal">What We Offer</p>
+        <h2 class="section-title reveal reveal-delay-1" id="programs-title">
+          Programs for <em>Every Goal.</em>
+        </h2>
+      </div>
+      <a href="membership.html" class="btn-primary reveal">View All Plans</a>
+    </div>
+
+    <div class="programs-grid">
+      <div class="program-card reveal">
+        <span class="program-icon">🏋️</span>
+        <h3>Strength Training</h3>
+        <p>Build muscle, increase strength, and sculpt your physique with expert guidance and premium free weights and machines.</p>
+      </div>
+      <div class="program-card reveal reveal-delay-1">
+        <span class="program-icon">🔥</span>
+        <h3>Cardio &amp; HIIT</h3>
+        <p>High-intensity interval training and cardio sessions designed to torch calories and boost your endurance fast.</p>
+      </div>
+      <div class="program-card reveal reveal-delay-2">
+        <span class="program-icon">🥊</span>
+        <h3>CrossFit</h3>
+        <p>Functional fitness combining strength, conditioning, and agility. Challenge yourself in a supportive group environment.</p>
+      </div>
+      <div class="program-card reveal reveal-delay-3">
+        <span class="program-icon">🧘</span>
+        <h3>Yoga &amp; Wellness</h3>
+        <p>Improve flexibility, reduce stress, and find balance. Our yoga sessions complement any training programme.</p>
+      </div>
+      <div class="program-card reveal reveal-delay-4">
+        <span class="program-icon">🎯</span>
+        <h3>Personal Training</h3>
+        <p>One-on-one sessions with a dedicated trainer — your goals, your pace, your plan. Fastest route to real results.</p>
+      </div>
+      <div class="program-card reveal reveal-delay-5">
+        <span class="program-icon">🍎</span>
+        <h3>Diet Consultation</h3>
+        <p>Training is only half the equation. Our nutrition consultants help you eat smarter and recover faster.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── TESTIMONIALS ────────────────────────────────────────── -->
+<section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-title">
+  <div class="wrap">
+    <div class="testimonials-header">
+      <div>
+        <p class="section-eyebrow reveal">Member Reviews</p>
+        <h2 class="section-title reveal reveal-delay-1" id="testimonials-title">
+          Real People,<br><em>Real Results.</em>
+        </h2>
+      </div>
+      <a href="#contact-strip" class="btn-primary reveal" style="height:fit-content;">Join Them</a>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="tcard reveal">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"Best gym I've joined in Bangalore. The trainers actually know what they're talking about, and the equipment is always maintained. I've been here 8 months and already hit goals I thought would take years."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">AR</div>
+          <div>
+            <div class="tcard-name">Arjun Rao</div>
+            <div class="tcard-meta">Member since 2023 · Strength Training</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard reveal reveal-delay-1">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"I was a complete beginner and terrified to walk in. The team at One Fitness made me feel welcome from day one. 6 months later — 10 kg down and more confident than ever."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">PS</div>
+          <div>
+            <div class="tcard-name">Priya Shetty</div>
+            <div class="tcard-meta">Member since 2024 · Weight Loss</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard reveal reveal-delay-2">
+        <div class="tcard-stars">★★★★★</div>
+        <p class="tcard-text">"Super convenient location and timings that work with my schedule. The trainers push you just the right amount. Best value-for-money membership in the area, hands down."</p>
+        <div class="tcard-author">
+          <div class="tcard-avatar">KM</div>
+          <div>
+            <div class="tcard-name">Karthik Menon</div>
+            <div class="tcard-meta">Member since 2022 · CrossFit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── CTA BANNER ─────────────────────────────────────────── -->
+<section class="cta-banner" aria-labelledby="cta-title">
+  <div class="wrap" style="position:relative;z-index:1;">
+    <p class="section-eyebrow reveal" style="justify-content:center;">Ready to Start?</p>
+    <h2 class="section-title reveal reveal-delay-1" id="cta-title" style="color:#fff;margin-bottom:16px;">
+      Your First Step<br>Starts <em style="color:rgba(255,255,255,0.5);">Today.</em>
+    </h2>
+    <p class="reveal reveal-delay-2">No judgment. No complicated contracts. Just show up, put in the work, and we'll handle the rest. Walk-ins welcome.</p>
+    <div class="cta-actions reveal reveal-delay-3">
+      <a href="membership.html" class="btn-white">View Membership Plans</a>
+      <a href="tel:+919980522000" class="btn-outline-white">Call Us First</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── CONTACT STRIP ──────────────────────────────────────── -->
+<section class="contact-strip" id="contact-strip" aria-label="Contact information">
+  <div class="wrap contact-grid">
+    <div class="contact-item">
+      <div class="contact-icon">📍</div>
+      <div>
+        <div class="contact-label">Find Us</div>
+        <div class="contact-value">
+          <a href="https://maps.google.com/?q=13+Mosque+Road+Bengaluru" target="_blank" rel="noopener">
+            13 Mosque Road, Bengaluru
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">📞</div>
+      <div>
+        <div class="contact-label">Call Us</div>
+        <div class="contact-value">
+          <a href="tel:+919980522000">099805 22000</a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">⏰</div>
+      <div>
+        <div class="contact-label">Working Hours</div>
+        <div class="contact-value">Mon – Sat: 6 AM – 11 PM<br>Sunday: Closed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer injected by js/components.js -->
+<div id="footer-root"></div>
+
+
+<!-- ── SCRIPTS ─────────────────────────────────────────────── -->
+<!-- Shared header/footer/menu/reveal/counters -->
+<script src="js/components.js"></script>
+
+<script>
+/* ── Hero Image Slider ──────────────────────────────────────── */
+(function() {
+  const slides   = document.querySelectorAll('.hero-slide');
+  const dotsWrap = document.getElementById('hero-dots');
+  const prevBtn  = document.getElementById('hero-prev');
+  const nextBtn  = document.getElementById('hero-next');
+  const currentEl = document.getElementById('hero-current');
+  const totalEl   = document.getElementById('hero-total');
+
+  let current  = 0;
+  let timer    = null;
+  const DELAY  = 5000; // auto-advance every 5 seconds
+
+  // Build dots
+  totalEl.textContent = String(slides.length).padStart(2, '0');
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'hero-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dotsWrap.children[current].classList.remove('active');
+
+    current = (index + slides.length) % slides.length;
+
+    slides[current].classList.add('active');
+    dotsWrap.children[current].classList.add('active');
+    currentEl.textContent = String(current + 1).padStart(2, '0');
+
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(current + 1), DELAY);
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  // Pause on hover
+  const hero = document.querySelector('.hero');
+  hero.addEventListener('mouseenter', () => clearInterval(timer));
+  hero.addEventListener('mouseleave', resetTimer);
+
+  // Keyboard support
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft')  goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+
+  // Touch / swipe
+  let touchStartX = 0;
+  hero.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  hero.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+  }, { passive: true });
+
+  resetTimer();
+})();
+
+
+// Reveal + counters handled by components.js
+</script>
+
+</body>
+</html>

@@ -222,6 +222,14 @@ document.body.insertAdjacentHTML('beforeend', WHATSAPP_BUTTON);
       }, { threshold: 0.6 });
       cntObs.observe(statsBar);
     }
-  }
 
-})();
+    /* ── Popup loader ───────────────────────────────────────── */
+    (function loadPopup() {
+      var script = document.createElement('script');
+      script.src = 'js/popup.js';
+      document.body.appendChild(script);
+    })();
+
+  } // closes init()
+
+})(); 

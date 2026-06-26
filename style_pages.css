@@ -468,3 +468,312 @@
 @media (max-width: 560px) {
   .trainers-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   ONE FITNESS — Lead Generation Popup
+   ============================================================ */
+
+/* Overlay */
+#of-popup-overlay,
+#of-success-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  padding: 1rem;
+}
+
+#of-popup-overlay.of-popup-visible,
+#of-success-overlay.of-popup-visible {
+  opacity: 1;
+}
+
+/* Card — glassmorphism */
+#of-popup-card {
+  position: relative;
+  background: rgba(12, 12, 12, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2.5rem 2rem 2rem;
+  width: 100%;
+  max-width: 430px;
+  box-shadow:
+    0 0 0 1px rgba(225, 29, 72, 0.15),
+    0 32px 64px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transform: translateY(24px) scale(0.97);
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#of-popup-overlay.of-popup-visible #of-popup-card {
+  transform: translateY(0) scale(1);
+}
+
+/* Close button */
+#of-popup-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aaa;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+  padding: 0;
+}
+
+#of-popup-close:hover {
+  background: rgba(225, 29, 72, 0.2);
+  color: #fff;
+  border-color: rgba(225, 29, 72, 0.4);
+}
+
+/* Badge */
+#of-popup-badge {
+  display: inline-block;
+  background: rgba(225, 29, 72, 0.15);
+  border: 1px solid rgba(225, 29, 72, 0.35);
+  color: #e11d48;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3em 0.75em;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+/* Heading */
+#of-popup-heading {
+  color: #ffffff;
+  font-size: clamp(1.35rem, 4vw, 1.65rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+/* Subtitle */
+#of-popup-subtitle {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0 0 1.5rem;
+}
+
+/* Form fields */
+#of-popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.of-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.of-field-group label {
+  color: #d1d5db;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.of-field-group input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  padding: 0.7rem 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.of-field-group input::placeholder {
+  color: #4b5563;
+}
+
+.of-field-group input:focus {
+  border-color: rgba(225, 29, 72, 0.6);
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Submit button */
+#of-popup-submit {
+  margin-top: 0.4rem;
+  background: #e11d48;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.85rem 1.5rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 20px rgba(225, 29, 72, 0.35);
+}
+
+#of-popup-submit:hover:not(:disabled) {
+  background: #be123c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 28px rgba(225, 29, 72, 0.5);
+}
+
+#of-popup-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+#of-popup-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+#of-submit-spinner svg {
+  animation: of-spin 0.8s linear infinite;
+}
+
+/* Privacy note */
+#of-popup-privacy {
+  color: #6b7280;
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0.9rem 0 0;
+}
+
+/* Inline error */
+.of-inline-error {
+  color: #f87171;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0.25rem 0 0;
+}
+
+/* ── Success modal ───────────────────────────────────────── */
+#of-success-card {
+  background: rgba(12, 12, 12, 0.95);
+  border: 1px solid rgba(225, 29, 72, 0.25);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.7);
+  transform: scale(0.92);
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#of-success-overlay.of-popup-visible #of-success-card {
+  transform: scale(1);
+}
+
+#of-success-icon {
+  width: 72px;
+  height: 72px;
+  background: rgba(225, 29, 72, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  border: 1px solid rgba(225, 29, 72, 0.25);
+}
+
+#of-success-card h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+}
+
+#of-success-card p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+
+#of-success-close {
+  background: #e11d48;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#of-success-close:hover {
+  background: #be123c;
+}
+
+/* ── Animations ─────────────────────────────────────────── */
+@keyframes of-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes of-shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px); }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px); }
+}
+
+.of-shake {
+  animation: of-shake 0.4s ease;
+}
+
+/* ── Reduced motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  #of-popup-card,
+  #of-success-card,
+  #of-popup-overlay,
+  #of-success-overlay {
+    transition: opacity 0.2s ease;
+    transform: none !important;
+  }
+  #of-submit-spinner svg {
+    animation: none;
+  }
+}
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  #of-popup-card {
+    padding: 2rem 1.25rem 1.5rem;
+    border-radius: 16px;
+  }
+  #of-popup-heading {
+    font-size: 1.25rem;
+  }
+}

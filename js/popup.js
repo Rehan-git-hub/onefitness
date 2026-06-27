@@ -35,7 +35,7 @@
 
         <div id="of-popup-badge">LIMITED OFFER</div>
 
-        <h2 id="of-popup-heading">🎉 Claim Your FREE 1-Day Trial</h2>
+        <h2 id="of-popup-heading">🎉 Claim Your FREE Trial</h2>
         <p id="of-popup-subtitle">
           Experience One Fitness before joining.<br>Fill in your details below.
         </p>
@@ -47,7 +47,7 @@
               type="text"
               id="of-name"
               name="name"
-              placeholder="John Doe"
+              placeholder="John"
               required
               autocomplete="name"
             />
@@ -59,7 +59,7 @@
               type="email"
               id="of-email"
               name="email"
-              placeholder="john@example.com"
+              placeholder="@example.com"
               required
               autocomplete="email"
             />
